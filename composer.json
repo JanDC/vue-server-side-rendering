@@ -1,0 +1,12 @@
+{
+    "name": "jandc/vue-server-side-rendering",
+    "require": {
+        "spatie/server-side-rendering": "^0.2.2"
+    },
+    "authors": [
+        {
+            "name": "Jan Decavele",
+            "email": "jandecavele@gmail.com"
+        }
+    ]
+}
