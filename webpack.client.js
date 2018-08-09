@@ -20,7 +20,7 @@ module.exports = merge(sharedConfig, {
         new webpack.HotModuleReplacementPlugin(),
         new VueLoaderPlugin(),
         new HtmlWebpackPlugin({
-            filename: path.resolve(__dirname, './resources/assets/vue/index.html'),
+            filename: 'index.html',
             template: path.resolve(__dirname, './resources/assets/vue/index.html'),
             inject: true
         })
