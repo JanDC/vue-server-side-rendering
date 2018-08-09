@@ -3,3 +3,4 @@ vendor
 var/
 node_modules
 .vagrant
+public/assets/js
