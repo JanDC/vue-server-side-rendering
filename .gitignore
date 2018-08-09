@@ -1,4 +1,4 @@
-composer.phar
 .idea
-/vendor/
+vendor
+var/
 node_modules
