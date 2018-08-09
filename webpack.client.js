@@ -10,10 +10,6 @@ module.exports = merge(sharedConfig, {
     entry: {
         'entry-client': path.resolve(__dirname, './resources/assets/vue/entry-client.js'),
     },
-    output: {
-        path: path.resolve(__dirname, 'public/assets/js/'),
-        filename: '[name].js',
-    },
     devServer: {
         hot: true,
         watchOptions: {
@@ -24,8 +20,8 @@ module.exports = merge(sharedConfig, {
         new webpack.HotModuleReplacementPlugin(),
         new VueLoaderPlugin(),
         new HtmlWebpackPlugin({
-            filename: 'index.html',
-            template: 'index.html',
+            filename: path.resolve(__dirname, './resources/assets/vue/index.html'),
+            template: path.resolve(__dirname, './resources/assets/vue/index.html'),
             inject: true
         })
     ]

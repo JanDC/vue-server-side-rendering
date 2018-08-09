@@ -7,10 +7,7 @@ module.exports = merge(sharedConfig, {
     entry: {
         'entry-server': path.resolve(__dirname, './resources/assets/vue/entry-server.js'),
     },
-    output: {
-        path: path.resolve(__dirname, 'public/assets/js/'),
-        filename: '[name].js',
-    }
+    target: 'node'
 });
 
 // 'use strict'
