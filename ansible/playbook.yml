@@ -8,5 +8,5 @@
 
   vars:
     app_domain: 'vue-ssr.dev'
-    guest_ip: '192.168.33.10'
+    guest_ip: '192.168.33.66'
     config_path: /vagrant/ansible/config

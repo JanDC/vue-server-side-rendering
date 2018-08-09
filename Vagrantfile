@@ -1,6 +1,6 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "Intracto/Debian9"
-  config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.network "private_network", ip: "192.168.33.66"
 
   config.vm.synced_folder ".", "/vagrant", type: "nfs", mount_options: %w{nolock,vers=3,udp,noatime,actimeo=1,lookupcache=none}
 

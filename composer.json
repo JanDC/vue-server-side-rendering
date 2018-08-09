@@ -13,10 +13,7 @@
     "symfony/framework-bundle": "^4.1",
     "symfony/lts": "^4@dev",
     "symfony/twig-bundle": "^4.1",
-    "symfony/yaml": "^4.1"
-  },
-  "require-dev": {
-    "roave/security-advisories": "dev-master",
+    "symfony/yaml": "^4.1",
     "symfony/dotenv": "^4.1"
   },
   "config": {
