@@ -14,7 +14,7 @@ class ApiController extends Controller
      *
      * @return JsonResponse
      */
-    public function title(Request $request, string $action)
+    public function index(Request $request, string $action)
     {
         return new JsonResponse($this->getContextByAction($action));
     }

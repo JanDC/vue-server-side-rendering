@@ -1,7 +1,8 @@
 api:
   path: /api/{action}
-  controller: App\Controller\DefaultController::index
-
+  controller: App\Controller\ApiController::index
+  requirements:
+    any: '.+'
 
 index:
   path: /
