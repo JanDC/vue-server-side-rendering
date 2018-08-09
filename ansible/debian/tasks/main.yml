@@ -26,6 +26,7 @@
    - git
    - curl
    - python-pip
+   - nodejs
 
 
 - shell: wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
