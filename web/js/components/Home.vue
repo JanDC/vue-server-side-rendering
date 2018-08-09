@@ -13,23 +13,21 @@
         </section>
         <nav class="flex flex-wrap">
             <router-link
-                v-for="type in types"
-                :key="type"
-                :to="{ name: 'packages', params: { type } }"
+                :to="{ name: 'home'}"
                 class="bg-blue-light font-bold mr-2 mb-2 sm:mr-4 sm:mb-0 px-4 py-2 no-underline rounded-sm text-white uppercase text-sm sm:text-base"
             >
-                {{ type }}
+                home
+            </router-link>
+            <router-link
+                :to="{ name: 'test'}"
+                class="bg-blue-light font-bold mr-2 mb-2 sm:mr-4 sm:mb-0 px-4 py-2 no-underline rounded-sm text-white uppercase text-sm sm:text-base"
+            >
+                test
             </router-link>
         </nav>
     </div>
 </template>
 
 <script>
-export default {
-    computed: {
-        types() {
-            return this.$store.getters.types;
-        },
-    },
-};
+export default {};
 </script>
