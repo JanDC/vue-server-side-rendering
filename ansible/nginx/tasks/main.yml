@@ -1,0 +1,23 @@
+- name: install required packages
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+   - nginx
+
+- shell: 'rm -f /etc/nginx/sites-enabled/*'
+- shell: chmod -R a+rX /var/log/nginx
+- replace:
+    dest: /etc/logrotate.d/nginx
+    regexp: 640
+    replace: 666'
+
+- shell: 'cp {{config_path}}/sites/{{app_domain}} /etc/nginx/sites-available/{{app_domain}}'
+- shell: 'ln -s /etc/nginx/sites-available/{{app_domain}} /etc/nginx/sites-enabled/{{app_domain}}'
+- systemd:
+    state: restarted
+    daemon_reload: no
+    name: "{{ item }}"
+  with_items:
+     - php7.2-fpm
+     - nginx

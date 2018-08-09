@@ -1,0 +1,68 @@
+- name: install php packages
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  with_items:
+  - php7.2-cli
+  - php7.2-fpm
+  - php7.2-dev
+  - php7.2-curl
+  - php7.2-intl
+  - php7.2-gd
+  - php7.2-mbstring
+  - php7.2-xml
+  - php7.2-bcmath
+  - php7.2-zip
+  - php-apcu
+  - php-xdebug
+  - composer
+  - phpunit
+
+
+- replace:
+    dest: /etc/php/7.2/cli/php.ini
+    regexp: ';date.timezone.*'
+    replace: 'date.timezone = Europe/Brussels'
+    backup: yes
+
+- replace:
+    dest: /etc/php/7.2/fpm/php.ini
+    regexp: ';date.timezone.*'
+    replace: 'date.timezone = Europe/Brussels'
+    backup: yes
+- replace:
+    dest: /etc/php/7.2/fpm/php.ini
+    regexp: 'upload_max_filesize = .*'
+    replace: 'upload_max_filesize = 20M'
+    backup: yes
+- replace:
+    dest: /etc/php/7.2/fpm/php.ini
+    regexp: 'post_max_size = .*'
+    replace: 'post_max_size = 24M'
+    backup: yes
+- replace:
+    dest: /etc/php/7.2/fpm/pool.d/www.conf
+    regexp: '^user = www-data'
+    replace: 'user = vagrant'
+    backup: yes
+- replace:
+    dest: /etc/php/7.2/fpm/pool.d/www.conf
+    regexp: 'group = www-data'
+    replace: 'group = vagrant'
+    backup: yes
+
+- shell: phpdismod xdebug
+
+- systemd:
+    state: restarted
+    daemon_reload: yes
+    name: php7.2-fpm
+
+- block:
+  - composer:
+      command: install
+      working_dir: /vagrant/
+      no_scripts: true
+  become: yes
+  become_user: vagrant

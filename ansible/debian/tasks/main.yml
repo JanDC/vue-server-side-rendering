@@ -1,0 +1,37 @@
+- name: update locale
+  replace:
+    dest: /etc/locale.gen
+    regexp: '# nl_BE.UTF-8 UTF-8'
+    replace: 'nl_BE.UTF-8 UTF-8'
+    backup: yes
+- shell: locale-gen
+- shell: echo "Europe/Brussels" > /etc/timezone
+- shell: dpkg-reconfigure -f noninteractive tzdata
+- shell: echo 'opcafegaan.dev' > /etc/hostname
+- shell: echo "127.0.0.1 {{app_domain}} opcafegaan.dev" >> /etc/hosts
+- shell: echo "cd /vagrant" >> /home/vagrant/.profile
+
+- name: install required packages
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  with_items:
+   - apt-transport-https
+   - lsb-release
+   - ca-certificates
+   - zsh
+   - dialog
+   - htop
+   - git
+   - curl
+   - python-pip
+
+
+- shell: wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+
+- shell: echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
+- shell: curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+
+- shell: curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+- shell: echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list

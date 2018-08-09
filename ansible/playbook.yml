@@ -1,0 +1,11 @@
+- hosts: all
+  become: yes
+  become_user: root
+  roles:
+  - debian
+  - php
+
+  vars:
+    app_domain: 'vue-ssr.dev'
+    guest_ip: '192.168.33.10'
+    config_path: /vagrant/ansible/config
