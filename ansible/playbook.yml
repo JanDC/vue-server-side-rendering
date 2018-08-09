@@ -4,6 +4,7 @@
   roles:
   - debian
   - php
+  - nginx
 
   vars:
     app_domain: 'vue-ssr.dev'
