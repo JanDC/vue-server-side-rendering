@@ -5,3 +5,4 @@ node_modules
 .vagrant
 .env
 public/assets/js
+*.log

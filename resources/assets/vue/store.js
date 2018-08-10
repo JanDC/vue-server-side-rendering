@@ -6,7 +6,7 @@ Vue.use(Vuex)
 
 // Assume we have a universal API that returns Promises
 // and ignore the implementation details
-import { fetchItem } from './api'
+//import { fetchItem } from './api'
 
 export function createStore () {
     return new Vuex.Store({

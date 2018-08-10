@@ -20,23 +20,30 @@
     </div>
 </template>
 
-<script>
-    import axios from 'axios';
+<style scoped>
+* {
+  border: solid red;
+}
+</style>
 
-    export default {
-        data() {
-            return {
-                title: null
-            }
-        },
-        beforeMount() {
-            console.log('test');
-            axios
-                .get('http://localhost:8080/api/title')
-                .then(response => (this.title = response.data.title))
-        },
-        components: {
-            /*'flickity': () => import('vue-flickity'),*/
-        }
+
+<script>
+import axios from "axios";
+
+export default {
+  data() {
+    return {
+      title: null
     };
+  },
+  beforeMount() {
+    console.log("test");
+    axios
+      .get("http://localhost:8080/api/title")
+      .then(response => (this.title = response.data.title));
+  },
+  components: {
+    /*'flickity': () => import('vue-flickity'),*/
+  }
+};
 </script>
