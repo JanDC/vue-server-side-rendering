@@ -1,23 +1,31 @@
-import Vue from 'vue';
-import uniq from 'lodash/uniq';
-import Vuex, { Store } from 'vuex';
+// store.js
+import Vue from 'vue'
+import Vuex from 'vuex'
 
-Vue.use(Vuex);
+Vue.use(Vuex)
 
-export default new Store({
-    state: {
-        packages: [],
-    },
+// Assume we have a universal API that returns Promises
+// and ignore the implementation details
+import { fetchItem } from './api'
 
-    getters: {
-        types: state => uniq(state.packages.map(p => p.type)).sort(),
-
-        packagesWithType: state => type => state.packages.filter(p => p.type === type),
-    },
-
-    mutations: {
-        setPackages(state, { packages }) {
-            state.packages = packages;
+export function createStore () {
+    return new Vuex.Store({
+        state: {
+            items: {}
         },
-    },
-});
+        actions: {
+            fetchItem ({ commit }, id) {
+                // return the Promise via `store.dispatch()` so that we know
+                // when the data has been fetched
+                return fetchItem(id).then(item => {
+                    commit('setItem', { id, item })
+                })
+            }
+        },
+        mutations: {
+            setItem (state, { id, item }) {
+                Vue.set(state.items, id, item)
+            }
+        }
+    })
+}

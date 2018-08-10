@@ -1,10 +1,16 @@
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const path = require('path');
+const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
     output: {
         path: path.resolve(__dirname, 'public/assets/js/'),
         filename: '[name].js',
+    },
+    resolve: {
+        alias: {
+            'vue$': 'vue/dist/vue.esm.js'
+        }
     },
     module: {
         rules: [
@@ -44,6 +50,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new VueLoaderPlugin()
+        new VueLoaderPlugin(),
+        new ManifestPlugin()
     ]
 };

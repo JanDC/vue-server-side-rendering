@@ -2,14 +2,15 @@
   "name": "vue-ssr",
   "version": "1.0.0",
   "scripts": {
-    "ssr:build": "webpack-cli --config webpack.server.js",
+    "server:build": "webpack-cli --config webpack.server.js",
     "client:build": "webpack-cli --config webpack.client.js",
-    "client:serve": "webpack-dev-server --config webpack.client.js"
+    "dev": "webpack-dev-server --config webpack.dev.js"
   },
   "dependencies": {
     "@babel/core": "^7.0.0-beta.56",
     "@babel/preset-env": "^7.0.0-beta.56",
     "autoprefixer": "^9.1.0",
+    "axios": "^0.18.0",
     "babel-loader": "^8.0.0-beta",
     "css-loader": "^1.0.0",
     "cssnano": "^4.0.5",
@@ -29,7 +30,9 @@
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5",
-    "webpack-merge": "^4.1.4"
+    "webpack-manifest-plugin": "^2.0.3",
+    "webpack-merge": "^4.1.4",
+    "webpack-node-externals": "^1.7.2"
   },
   "browserslist": [
     "> .5% in BE"
