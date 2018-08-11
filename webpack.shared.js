@@ -1,11 +1,8 @@
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const path = require('path');
 const webpack = require('webpack');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
-const TARGET = process.env.npm_lifecycle_event;
-console.log('target: ' + TARGET);
 
 module.exports = {
 

@@ -2,29 +2,37 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 // Assume we have a universal API that returns Promises
 // and ignore the implementation details
 //import { fetchItem } from './api'
+import axios from 'axios';
 
-export function createStore () {
+export function createStore() {
     return new Vuex.Store({
         state: {
-            items: {}
+            title: null
+        },
+        getters: {
+            getTitle: (state) => {
+                return state.title;
+            }
         },
         actions: {
-            fetchItem ({ commit }, id) {
+            fetchTitle({commit}, id) {
                 // return the Promise via `store.dispatch()` so that we know
                 // when the data has been fetched
-                return fetchItem(id).then(item => {
-                    commit('setItem', { id, item })
-                })
+                return axios
+                    .get("http://localhost:8080/api/title")
+                    .then(response => {
+                        commit('setTitle', {id, title: response.data.title})
+                    });
             }
         },
         mutations: {
-            setItem (state, { id, item }) {
-                Vue.set(state.items, id, item)
+            setTitle(state, {id, title}) {
+                state.title = title;
             }
         }
     })

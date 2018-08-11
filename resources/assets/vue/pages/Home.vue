@@ -21,29 +21,23 @@
 </template>
 
 <style scoped>
-* {
-  border: solid red;
-}
+    * {
+        border: solid red;
+    }
 </style>
 
 
 <script>
-import axios from "axios";
-
-export default {
-  data() {
-    return {
-      title: null
+    import { mapState, mapActions } from 'vuex'
+    export default {
+        computed: mapState({
+            title: state => state.title
+        }),
+        created () {
+            this.$store.dispatch('fetchTitle')
+        },
+        components: {
+            /*'flickity': () => import('vue-flickity'),*/
+        }
     };
-  },
-  beforeMount() {
-    console.log("test");
-    axios
-      .get("http://localhost:8080/api/title")
-      .then(response => (this.title = response.data.title));
-  },
-  components: {
-    /*'flickity': () => import('vue-flickity'),*/
-  }
-};
 </script>

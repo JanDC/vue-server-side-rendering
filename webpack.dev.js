@@ -3,6 +3,7 @@ const sharedConfig = require('./webpack.shared.js');
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WriteFilePlugin = require('write-file-webpack-plugin');
 
 module.exports = merge(sharedConfig, {
     mode: 'development',
@@ -28,6 +29,6 @@ module.exports = merge(sharedConfig, {
             filename: 'index.html',
             template: path.resolve(__dirname, './resources/assets/vue/index.html'),
             inject: true
-        })
+        }),
     ]
 });

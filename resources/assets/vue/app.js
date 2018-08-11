@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import store from './store';
+import {createStore}  from './store';
 import router from './router';
 import App from './components/App.vue';
 
@@ -10,6 +10,7 @@ import noSSR from 'vue-no-ssr';
 Vue.component('v-nav', Nav);
 Vue.component('no-ssr', noSSR);
 
+const store = createStore();
 export default new Vue({
     store,
     router,
