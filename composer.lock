@@ -1,11 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "hash": "c1f5de04a402001bfde113307c89f7c5",
-    "content-hash": "85595b735d561aa1d34595d02e3516ed",
+    "content-hash": "68050588c1b6aea9d653c5cf7a4fa324",
     "packages": [
         {
             "name": "psr/cache",
@@ -51,7 +50,7 @@
                 "psr",
                 "psr-6"
             ],
-            "time": "2016-08-06 20:24:11"
+            "time": "2016-08-06T20:24:11+00:00"
         },
         {
             "name": "psr/container",
@@ -100,7 +99,7 @@
                 "container-interop",
                 "psr"
             ],
-            "time": "2017-02-14 16:28:37"
+            "time": "2017-02-14T16:28:37+00:00"
         },
         {
             "name": "psr/log",
@@ -147,7 +146,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10 12:19:37"
+            "time": "2016-10-10T12:19:37+00:00"
         },
         {
             "name": "psr/simple-cache",
@@ -195,20 +194,20 @@
                 "psr-16",
                 "simple-cache"
             ],
-            "time": "2017-10-23 01:57:42"
+            "time": "2017-10-23T01:57:42+00:00"
         },
         {
             "name": "spatie/server-side-rendering",
-            "version": "0.2.4",
+            "version": "0.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/server-side-rendering.git",
-                "reference": "eb0c98ef957ea2cc9dd5fa261f6bfec2f8545e95"
+                "reference": "fb646f07be18e83324d7e32773c19ccf06a78530"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/server-side-rendering/zipball/eb0c98ef957ea2cc9dd5fa261f6bfec2f8545e95",
-                "reference": "eb0c98ef957ea2cc9dd5fa261f6bfec2f8545e95",
+                "url": "https://api.github.com/repos/spatie/server-side-rendering/zipball/fb646f07be18e83324d7e32773c19ccf06a78530",
+                "reference": "fb646f07be18e83324d7e32773c19ccf06a78530",
                 "shasum": ""
             },
             "require": {
@@ -243,7 +242,7 @@
                 "server-side-rendering",
                 "spatie"
             ],
-            "time": "2018-03-27 15:07:12"
+            "time": "2018-08-10T08:07:00+00:00"
         },
         {
             "name": "symfony/cache",
@@ -312,7 +311,7 @@
                 "caching",
                 "psr6"
             ],
-            "time": "2018-07-26 11:24:31"
+            "time": "2018-07-26T11:24:31+00:00"
         },
         {
             "name": "symfony/config",
@@ -375,7 +374,7 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26 11:24:31"
+            "time": "2018-07-26T11:24:31+00:00"
         },
         {
             "name": "symfony/console",
@@ -443,7 +442,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26 11:24:31"
+            "time": "2018-07-26T11:24:31+00:00"
         },
         {
             "name": "symfony/debug",
@@ -499,7 +498,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26 11:24:31"
+            "time": "2018-07-26T11:24:31+00:00"
         },
         {
             "name": "symfony/dependency-injection",
@@ -570,7 +569,7 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2018-08-01 08:24:03"
+            "time": "2018-08-01T08:24:03+00:00"
         },
         {
             "name": "symfony/dotenv",
@@ -627,7 +626,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2018-07-26 11:24:31"
+            "time": "2018-07-26T11:24:31+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -690,7 +689,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26 09:10:45"
+            "time": "2018-07-26T09:10:45+00:00"
         },
         {
             "name": "symfony/filesystem",
@@ -740,7 +739,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26 11:24:31"
+            "time": "2018-07-26T11:24:31+00:00"
         },
         {
             "name": "symfony/finder",
@@ -789,7 +788,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26 11:24:31"
+            "time": "2018-07-26T11:24:31+00:00"
         },
         {
             "name": "symfony/flex",
@@ -836,7 +835,7 @@
                 }
             ],
             "description": "Composer plugin for Symfony",
-            "time": "2018-07-29 16:20:30"
+            "time": "2018-07-29T16:20:30+00:00"
         },
         {
             "name": "symfony/framework-bundle",
@@ -952,7 +951,7 @@
             ],
             "description": "Symfony FrameworkBundle",
             "homepage": "https://symfony.com",
-            "time": "2018-08-01 08:24:03"
+            "time": "2018-08-01T08:24:03+00:00"
         },
         {
             "name": "symfony/http-foundation",
@@ -1006,7 +1005,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2018-08-01 14:07:44"
+            "time": "2018-08-01T14:07:44+00:00"
         },
         {
             "name": "symfony/http-kernel",
@@ -1093,22 +1092,11 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
-            "time": "2018-08-01 15:30:34"
+            "time": "2018-08-01T15:30:34+00:00"
         },
         {
             "name": "symfony/lts",
             "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/lts.git",
-                "reference": "6de50b244bad631a71544b3cc3c8e206c0e5f991"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/lts/zipball/6de50b244bad631a71544b3cc3c8e206c0e5f991",
-                "reference": "6de50b244bad631a71544b3cc3c8e206c0e5f991",
-                "shasum": ""
-            },
             "conflict": {
                 "symfony/asset": ">=5",
                 "symfony/browser-kit": ">=5",
@@ -1186,7 +1174,7 @@
             ],
             "description": "Enforces Long Term Supported versions of Symfony components",
             "homepage": "https://symfony.com",
-            "time": "2018-04-03 05:04:16"
+            "time": "2018-04-03T05:04:16+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -1245,7 +1233,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-08-06 14:22:27"
+            "time": "2018-08-06T14:22:27+00:00"
         },
         {
             "name": "symfony/process",
@@ -1294,7 +1282,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26 11:24:31"
+            "time": "2018-07-26T11:24:31+00:00"
         },
         {
             "name": "symfony/routing",
@@ -1371,7 +1359,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2018-07-26 11:24:31"
+            "time": "2018-07-26T11:24:31+00:00"
         },
         {
             "name": "symfony/twig-bridge",
@@ -1461,7 +1449,7 @@
             ],
             "description": "Symfony Twig Bridge",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26 11:24:31"
+            "time": "2018-07-26T11:24:31+00:00"
         },
         {
             "name": "symfony/twig-bundle",
@@ -1535,7 +1523,66 @@
             ],
             "description": "Symfony TwigBundle",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26 09:10:45"
+            "time": "2018-07-26T09:10:45+00:00"
+        },
+        {
+            "name": "symfony/web-server-bundle",
+            "version": "v4.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/web-server-bundle.git",
+                "reference": "448d4437e95d0884856a1e83bc51a15b5d048060"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/web-server-bundle/zipball/448d4437e95d0884856a1e83bc51a15b5d048060",
+                "reference": "448d4437e95d0884856a1e83bc51a15b5d048060",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/config": "~3.4|~4.0",
+                "symfony/console": "~3.4|~4.0",
+                "symfony/dependency-injection": "~3.4|~4.0",
+                "symfony/http-kernel": "~3.4|~4.0",
+                "symfony/polyfill-ctype": "~1.8",
+                "symfony/process": "^3.4.2|^4.0.2"
+            },
+            "suggest": {
+                "symfony/expression-language": "For using the filter option of the log server.",
+                "symfony/monolog-bridge": "For using the log server."
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Bundle\\WebServerBundle\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony WebServerBundle",
+            "homepage": "https://symfony.com",
+            "time": "2018-07-26T09:10:45+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -1594,7 +1641,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26 11:24:31"
+            "time": "2018-07-26T11:24:31+00:00"
         },
         {
             "name": "twig/twig",
@@ -1661,7 +1708,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2018-07-13 07:18:09"
+            "time": "2018-07-13T07:18:09+00:00"
         }
     ],
     "packages-dev": [],

@@ -9,12 +9,13 @@
     "ext-iconv": "*",
     "spatie/server-side-rendering": "^0.2.4",
     "symfony/console": "^4.1",
+    "symfony/dotenv": "^4.1",
     "symfony/flex": "^1.0",
     "symfony/framework-bundle": "^4.1",
     "symfony/lts": "^4@dev",
     "symfony/twig-bundle": "^4.1",
-    "symfony/yaml": "^4.1",
-    "symfony/dotenv": "^4.1"
+    "symfony/web-server-bundle": "^4.1",
+    "symfony/yaml": "^4.1"
   },
   "config": {
     "preferred-install": {
