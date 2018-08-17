@@ -21,6 +21,9 @@ class ApiController extends Controller
 
     private function getContextByAction(string $action)
     {
+
+        usleep(random_int(10 ** 3, 10 ** 5)); // Simulate lookup time (10-100ms/query)
+
         switch ($action) {
             case 'title':
                 return ['title' => 'hoi wereld'];
