@@ -13,4 +13,4 @@ Test project to experiment with php rendered vue apps
 
 ## Run it by
  - using the vagrant box
- - using the php built in server `# php -S localhost:8080 public`
+ - using the php built in server `(public)# php -S localhost:8080`
