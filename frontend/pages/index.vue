@@ -1,7 +1,7 @@
 <template>
   <section class="container">
 
-    <form class="d-flex vh-100 p-3 mx-auto flex-column justify-content-center">
+    <form class="d-flex vh-100 w-50 p-3 mx-auto flex-column justify-content-center">
       <div class="form-group">
         <label for="register-email-1">Email</label>
         <input type="email" class="form-control" id="register-email-1">
