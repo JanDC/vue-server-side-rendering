@@ -1,0 +1,15 @@
+// Bootstrap variables:
+@import "~bootstrap-rfs/scss/functions";
+@import "bootstrap/variables";
+@import "~bootstrap-rfs/scss/variables";
+@import "bootstrap/variables-override";
+@import "~bootstrap-rfs/scss/mixins";
+@import "~simple-media-queries/scss/simple-media-queries";
+
+html,body{
+  height: 100%;
+}
+
+.vh-100{
+  height: 100vh;
+}
