@@ -5,6 +5,7 @@
   - debian
   - php
   - nginx
+  - frontend
 
   vars:
     app_domain: 'vue.ssr'

@@ -7,12 +7,19 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |vb|
      vb.gui = false
 
-     vb.memory = "2048"
+     vb.memory = 4096
+     vb.cpus = 4
+
    end
 
    config.vm.provision "ansible_local" do |ansible|
        ansible.verbose = "v"
        ansible.playbook = "ansible/playbook.yml"
        ansible.version = "latest"
-     end
+   end
+
+   config.trigger.after :all do |trigger|
+       trigger.ignore = [:destroy, :halt, :ssh_run]
+       trigger.run_remote = {inline: "sudo supervisorctl restart all"}
+   end
 end
