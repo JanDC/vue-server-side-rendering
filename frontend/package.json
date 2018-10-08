@@ -19,7 +19,8 @@
     "node-sass": "^4.9.3",
     "nuxt": "^2.0.0",
     "sass-loader": "^7.1.0",
-    "simple-media-queries": "^1.1.1"
+    "simple-media-queries": "^1.1.1",
+    "vuejs-datepicker": "^1.5.3"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
