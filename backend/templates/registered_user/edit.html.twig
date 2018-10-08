@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<title>Edit RegisteredUser</title>
+
+{% block body %}
+    <h1>Edit RegisteredUser</h1>
+
+    {{ include('registered_user/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('registered_user_index') }}">back to list</a>
+
+    {{ include('registered_user/_delete_form.html.twig') }}
+{% endblock %}

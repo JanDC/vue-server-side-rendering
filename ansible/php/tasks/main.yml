@@ -13,6 +13,7 @@
   - php7.2-mbstring
   - php7.2-xml
   - php7.2-bcmath
+  - php7.2-sqlite
   - php7.2-zip
   - php-apcu
   - php-xdebug
@@ -62,7 +63,7 @@
 - block:
   - composer:
       command: install
-      working_dir: /vagrant/
+      working_dir: /vagrant/backend
       no_scripts: true
   become: yes
   become_user: vagrant

@@ -7,6 +7,6 @@
   - nginx
 
   vars:
-    app_domain: 'vue-ssr.dev'
+    app_domain: 'vue.ssr'
     guest_ip: '192.168.33.66'
     config_path: /vagrant/ansible/config

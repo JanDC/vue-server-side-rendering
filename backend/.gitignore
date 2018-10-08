@@ -2,8 +2,6 @@
 vendor
 var/
 .vagrant
+public/bundles
 .env
 *.log
-###> symfony/web-server-bundle ###
-/.web-server-pid
-###< symfony/web-server-bundle ###

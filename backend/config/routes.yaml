@@ -1,14 +1,3 @@
-api:
-  path: /api/{action}
-  controller: App\Controller\ApiController::index
-  requirements:
-    any: '.+'
-
 index:
-  path: /
-  controller: App\Controller\DefaultController::index
-all:
-  path: /{any}
-  controller: App\Controller\DefaultController::index
-  requirements:
-    any: '.+'
+  path: /admin/users
+  controller: App\Controller\AdminController::listUsersAction

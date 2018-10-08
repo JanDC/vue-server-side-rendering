@@ -12,6 +12,5 @@ Test project to experiment with php rendered vue apps
 `# yarn client:build`
 
 ## Run it by
- - using the vagrant box or
- - using the php built in server `(public)# php -S localhost:8080`
+ - using the vagrant box 
  - running the webpack dev server `# yarn dev`

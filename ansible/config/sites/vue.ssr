@@ -23,8 +23,8 @@ server {
 	    application/rss+xml
 	    image/svg+xml;
 
-	server_name vue-ssr.dev;
-    root /vagrant/public ;
+	server_name vue.ssr;
+    root /vagrant/backend/public ;
 	index /index.php;
 
 	location / {

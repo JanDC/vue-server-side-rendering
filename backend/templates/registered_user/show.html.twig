@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<title>RegisteredUser</title>
+
+{% block body %}
+    <h1>RegisteredUser</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ registered_user.id }}</td>
+            </tr>
+            <tr>
+                <th>Sex</th>
+                <td>{{ registered_user.sex }}</td>
+            </tr>
+            <tr>
+                <th>Firstname</th>
+                <td>{{ registered_user.firstname }}</td>
+            </tr>
+            <tr>
+                <th>Lastname</th>
+                <td>{{ registered_user.lastname }}</td>
+            </tr>
+            <tr>
+                <th>Birthday</th>
+                <td>{{ registered_user.birthday }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('registered_user_index') }}">back to list</a>
+
+    <a href="{{ path('registered_user_edit', {'id': registered_user.id}) }}">edit</a>
+
+    {{ include('registered_user/_delete_form.html.twig') }}
+{% endblock %}

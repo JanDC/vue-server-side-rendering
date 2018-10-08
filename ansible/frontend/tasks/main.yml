@@ -1,0 +1,37 @@
+- name: install node and supervisor packages
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  with_items:
+   - nodejs
+   - yarn
+   - supervisor
+
+- shell: yarn
+  args:
+    chdir: /vagrant/frontend
+
+- shell: yarn svg
+  args:
+    chdir: /vagrant/frontend
+
+- shell: yarn build
+  args:
+    chdir: /vagrant/frontend
+
+- shell: 'cp {{config_path}}/supervisor/frontend.conf /etc/supervisor/conf.d/frontend.conf'
+
+- shell: 'cp {{config_path}}/supervisor/boot-nuxt /usr/bin/boot-nuxt'
+
+- shell: 'chmod +x /usr/bin/boot-nuxt'
+
+- shell: 'rm -rf /vagrant/web/_nuxt'
+- shell: 'ln -s /vagrant/frontend/.nuxt/dist /vagrant/web/_nuxt'
+
+- systemd:
+    state: restarted
+    daemon_reload: no
+    name: "{{ item }}"
+  with_items:
+     - supervisor

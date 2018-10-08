@@ -7,8 +7,8 @@
 - shell: locale-gen
 - shell: echo "Europe/Brussels" > /etc/timezone
 - shell: dpkg-reconfigure -f noninteractive tzdata
-- shell: echo 'opcafegaan.dev' > /etc/hostname
-- shell: echo "127.0.0.1 {{app_domain}} opcafegaan.dev" >> /etc/hosts
+- shell: echo 'vue.ssr' > /etc/hostname
+- shell: echo "127.0.0.1 {{app_domain}} vue.ssr" >> /etc/hosts
 - shell: echo "cd /vagrant" >> /home/vagrant/.profile
 
 - name: install required packages
