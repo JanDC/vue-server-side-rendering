@@ -1,13 +1,13 @@
 <template>
   <section class="container">
     <div class="d-flex vh-100 w-50 p-3 mx-auto flex-column justify-content-center">
-      <form>
+      <form @submit.prevent="submit">
         <nuxt-link to="/">← Back</nuxt-link>
         <hr>
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="register-firstname">Voornaam</label>
-            <input type="text" class="form-control" id="register-firstname">
+            <input type="text" class="form-control" id="register-firstname" v-model="name">
           </div>
           <div class="form-group col-md-6">
             <label for="register-lastname">Achternaam</label>
@@ -62,6 +62,7 @@
 
 <script>
   import datepicker from 'vuejs-datepicker';
+  import axios from 'axios';
 
   export default {
     components: {
@@ -70,6 +71,21 @@
     data() {
       return {
         date: null,
+        name: '',
+        posts: [],
+        errors: [],
+      }
+    },
+    methods: {
+      submit() {
+        this.$axios.$get(`/registered_users`, {
+          name: this.name
+        }).then(function (response) {
+          console.log(response);
+        })
+          .catch(function (error) {
+            console.log(error);
+          });
       }
     }
   }

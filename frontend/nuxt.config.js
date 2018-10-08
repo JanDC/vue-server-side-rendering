@@ -1,4 +1,7 @@
-const pkg = require('./package')
+const pkg = require('./package');
+const dotEnv = require('dotenv').config({ path: '../.env' });
+console.log(process.env.BASE_URL);
+console.log(dotEnv);
 
 module.exports = {
   mode: 'universal',
@@ -39,13 +42,16 @@ module.exports = {
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
-    '~/modules/router.js'
+    '~/modules/router.js',
+    ['@nuxtjs/dotenv', {path: '../.env'}],
   ],
   /*
   ** Axios module configuration
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+    baseURL: dotEnv.BASE_URL,
+    browserBaseURL: dotEnv.BASE_URL,
   },
 
   /*

@@ -748,7 +748,7 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@nuxtjs/axios@^5.0.0":
+"@nuxtjs/axios@^5.3.3":
   version "5.3.3"
   resolved "https://registry.yarnpkg.com/@nuxtjs/axios/-/axios-5.3.3.tgz#0b09604e4c5e4b3ef1b5baac507e34ee25a3f82d"
   integrity sha512-GdbMc1Vv2RBXxTZRO/dKkyNadEpp/P6riFd4OJJtfX2FIXaUuoh1PbTMTDbE2cyr/anUMt1H9UnlkkEol+nuNA==
@@ -773,6 +773,13 @@
     "@babel/runtime" "^7.0.0"
     babel-helper-vue-jsx-merge-props "^2.0.3"
     babel-plugin-transform-vue-jsx "^4.0.1"
+
+"@nuxtjs/dotenv@^1.1.1":
+  version "1.1.1"
+  resolved "http://registry.npmjs.org/@nuxtjs/dotenv/-/dotenv-1.1.1.tgz#c3d68f96d8f76cac4c4ddbc8268702eb95737bbe"
+  integrity sha512-AWfz8GM+iB09jY2H09RlXK5Pwjsowmyar6/0nGUU9SfbwqndiB73MzCXrAG8BWggSISMP5/VFHOK0aqQcBeKkQ==
+  dependencies:
+    dotenv "^5.0.0"
 
 "@nuxtjs/friendly-errors-webpack-plugin@^2.0.2":
   version "2.0.2"
@@ -2651,6 +2658,11 @@ dot-prop@^4.1.0, dot-prop@^4.1.1:
   integrity sha512-tUMXrxlExSW6U2EXiiKGSBVdYgtV8qlHL+C10TsW4PURY/ic+eaysnSkwB4kA/mBlCyy/IKDJ+Lc3wbWeaXtuQ==
   dependencies:
     is-obj "^1.0.0"
+
+dotenv@^5.0.0:
+  version "5.0.1"
+  resolved "http://registry.npmjs.org/dotenv/-/dotenv-5.0.1.tgz#a5317459bd3d79ab88cff6e44057a6a3fbb1fcef"
+  integrity sha512-4As8uPrjfwb7VXC+WnLCbXK7y+Ueb2B3zgNCePYfhxS1PYeaO1YTeplffTEcbfLhvFNGLAz90VvJs9yomG7bow==
 
 duplexer3@^0.1.4:
   version "0.1.4"
@@ -8062,6 +8074,7 @@ vue@^2.5.17:
 vuejs-datepicker@^1.5.3:
   version "1.5.3"
   resolved "https://registry.yarnpkg.com/vuejs-datepicker/-/vuejs-datepicker-1.5.3.tgz#cf26082526151724ac31a3bb8e89da998e3876df"
+  integrity sha512-vCYLx7rbYPEqLLx1EplFQHxkMA/SAFJvwj5PYzeaG98q7hynLZMXsvhE8FPr08PJUiKA+zRknq0CqRioNYLYkg==
 
 vuex@^3.0.1:
   version "3.0.1"
