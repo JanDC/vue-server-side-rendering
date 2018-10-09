@@ -20,6 +20,6 @@ Vagrant.configure("2") do |config|
 
    config.trigger.after :all do |trigger|
        trigger.ignore = [:destroy, :halt, :ssh_run]
-       trigger.run_remote = {inline: "sudo supervisorctl restart all"}
+       trigger.run_remote = {inline: "/vagrant/boot.sh"}
    end
 end
