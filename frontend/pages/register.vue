@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <div class="d-flex vh-100 w-50 p-3 mx-auto flex-column justify-content-center">
-      <form @submit.prevent="submit">
+      <form method="post" @submit.prevent="submit">
         <nuxt-link to="/">← Back</nuxt-link>
         <hr>
         <div class="form-row">
@@ -11,7 +11,7 @@
           </div>
           <div class="form-group col-md-6">
             <label for="register-lastname">Achternaam</label>
-            <input type="text" class="form-control" id="register-lastname">
+            <input type="text" class="form-control" id="register-lastname" v-model="last_name">
           </div>
         </div>
         <div class="form-group">
@@ -72,13 +72,15 @@
       return {
         date: null,
         name: '',
+        last_name: '',
         posts: [],
         errors: [],
       }
     },
+    middleware: 'test',
     methods: {
       submit() {
-        this.$axios.$get(`/registered_users`, {
+        this.$axios.$post(`http://vue.ssr/api/registered_users`, {
           name: this.name
         }).then(function (response) {
           console.log(response);

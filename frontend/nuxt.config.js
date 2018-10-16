@@ -1,7 +1,7 @@
 const pkg = require('./package');
 const dotEnv = require('dotenv').config({ path: '../.env' });
 console.log(process.env.BASE_URL);
-console.log(dotEnv);
+console.log(dotEnv.BASE_URL);
 
 module.exports = {
   mode: 'universal',
