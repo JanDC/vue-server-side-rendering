@@ -8,8 +8,8 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |vb|
      vb.gui = false
 
-     vb.memory = 4096
-     vb.cpus = 4
+     vb.memory = 2048
+     vb.cpus = 2
 
    end
 
@@ -21,6 +21,6 @@ Vagrant.configure("2") do |config|
 
    config.trigger.after :all do |trigger|
        trigger.ignore = [:destroy, :halt, :ssh_run]
-       trigger.run_remote = {inline: "/vagrant/boot.sh"}
+       trigger.run_remote = {inline: "sudo /vagrant/boot.sh"}
    end
 end
