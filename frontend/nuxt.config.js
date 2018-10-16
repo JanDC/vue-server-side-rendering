@@ -1,7 +1,6 @@
 const pkg = require('./package');
-const dotEnv = require('dotenv').config({ path: '../.env' });
-console.log(process.env.BASE_URL);
-console.log(dotEnv.BASE_URL);
+const dotEnv = require('dotenv').config({path: '../.env'});
+const bodyParser = require('body-parser');
 
 module.exports = {
   mode: 'universal',
@@ -27,7 +26,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ['@/assets/scss/main.scss','@/assets/scss/bootstrap.scss'],
+  css: ['@/assets/scss/main.scss', '@/assets/scss/bootstrap.scss'],
 
   /*
   ** Plugins to load before mounting the App
@@ -35,7 +34,9 @@ module.exports = {
   plugins: [
     {src: '~/plugins/datepicker.js', ssr: false}
   ],
-
+  serverMiddleware: [
+    bodyParser.urlencoded({extended: true}),
+  ],
   /*
   ** Nuxt.js modules
   */
