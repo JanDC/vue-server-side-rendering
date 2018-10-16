@@ -1,8 +1,9 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "Intracto/Debian9"
   config.vm.network "private_network", ip: "192.168.33.66"
+  config.ssh.forward_agent = true
 
-  config.vm.synced_folder ".", "/vagrant", type: "nfs", mount_options: %w{nolock,vers=3,udp,noatime,actimeo=1,lookupcache=none}
+  config.vm.synced_folder ".", "/vagrant", type: "nfs", mount_options: ['rw', 'vers=3', 'tcp', 'fsc', 'nolock', 'actimeo=2']
 
   config.vm.provider "virtualbox" do |vb|
      vb.gui = false
