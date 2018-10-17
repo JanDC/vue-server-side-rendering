@@ -102,12 +102,12 @@ class RegisteredUser
         return $this;
     }
 
-    public function getBirthday(): ?\DateTimeInterface
+    public function getBirthday()
     {
         return $this->birthday;
     }
 
-    public function setBirthday(?\DateTimeInterface $birthday): self
+    public function setBirthday($birthday): self
     {
         $this->birthday = $birthday;
 

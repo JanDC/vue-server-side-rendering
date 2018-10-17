@@ -2,6 +2,7 @@
 
 namespace App\Serializer;
 
+use Symfony\Component\Serializer\Exception\NotNormalizableValueException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer as SymfonyDateTimeNormalizer;
@@ -31,7 +32,11 @@ class DateTimeNormalizer implements NormalizerInterface, DenormalizerInterface
             return null;
         }
 
-        return $this->dateTimeNormalizer->denormalize($data, $class, $format, $context);
+        try {
+            return $this->dateTimeNormalizer->denormalize($data, $class, $format, $context);
+        } catch (NotNormalizableValueException $notNormalizableValueException) {
+            return $data;
+        }
     }
 
     public function normalize($object, $format = null, array $context = array())
