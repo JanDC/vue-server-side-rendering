@@ -1,5 +1,5 @@
 export default ({req, store}) => {
-  if (req.method === "POST") {
+  if (typeof req !== "undefined" && req.method === "POST") {
     return store.dispatch('user/register/createUser', req.body);
   }
 }

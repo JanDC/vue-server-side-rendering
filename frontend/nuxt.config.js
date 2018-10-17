@@ -32,7 +32,7 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    {src: '~/plugins/datepicker.js', ssr: false}
+    {src: '~/plugins/datepicker.js', ssr: false},
   ],
   serverMiddleware: [
     bodyParser.urlencoded({extended: true}),

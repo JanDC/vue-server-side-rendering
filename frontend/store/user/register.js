@@ -1,33 +1,57 @@
-const {parse} = require('querystring');
+import {getField, updateField} from 'vuex-map-fields';
 
 export const state = () => ({
   user: {},
-  registerErrors: {},
+  errors: {},
+  success: null,
+  form: {
+    firstname: '',
+    lastname: '',
+    sex: 'male',
+    birthday: null,
+    email: '',
+  },
 });
 
 export const mutations = {
+  updateField,
   STORE_USER(state, user) {
     state.user = user;
-    console.log(user);
   },
-  STORE_REGISTER_ERRORS(state, errors) {
-    state.registerErrors = errors;
+  STORE_FORM(state, form) {
+    state.form = form;
   },
+  STORE_ERRORS(state, messages) {
+    state.errors = messages;
+  },
+  STORE_SUCCESS(state, messages) {
+    state.success = messages;
+  },
+};
+
+export const getters = {
+  getField
 };
 
 export const actions = {
   async createUser({commit}, form) {
     try {
-      console.log(form);
-      const response = await this.$axios({method: "POST", url: `http://vue.ssr/api/registered_users`, data: form, responseType: 'json',});
-      // Parse 'n process
+      const response = await this.$axios({
+        method: "POST",
+        url: `http://vue.ssr/api/registered_users`,
+        data: form,
+        responseType: 'json',
+      });
+
       const user = response.data;
       commit("STORE_USER", user);
-      commit("STORE_REGISTER_ERRORS", {});
-
+      commit("STORE_SUCCESS", {message: 'U bent succesvol geregistreerd'});
+      commit("STORE_ERRORS", {});
     } catch (error) {
-      console.log('nok');
-      commit("STORE_REGISTER_ERRORS", error.response.data);
+      commit("STORE_FORM", form);
+      commit("STORE_ERRORS", error.response.data);
+      commit("STORE_USER", {});
+      commit("STORE_SUCCESS", null);
     }
   },
 };
