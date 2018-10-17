@@ -22,6 +22,11 @@ services:
     resource: '../src/*'
     exclude: '../src/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'
 
+  App\Serializer\DateTimeNormalizer:
+    class:     App\Serializer\DateTimeNormalizer
+    decorates: serializer.normalizer.datetime
+    arguments: ['@App\Serializer\DateTimeNormalizer.inner']
+
   # controllers are imported separately to make sure services can be injected
   # as action arguments even if you don't extend any base controller class
   App\Controller\:

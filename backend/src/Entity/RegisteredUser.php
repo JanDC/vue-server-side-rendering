@@ -42,8 +42,9 @@ class RegisteredUser
 
     /**
      * @Assert\NotBlank()
+     * @Assert\Date()
      *
-     * @ORM\Column(type="date", nullable=true)
+     * @ORM\Column(type="date")
      */
     private $birthday;
 
@@ -54,6 +55,11 @@ class RegisteredUser
      * @ORM\Column(type="string", length=255)
      */
     private $email;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $language = 'en';
 
     public function getId(): ?int
     {
@@ -96,12 +102,12 @@ class RegisteredUser
         return $this;
     }
 
-    public function getBirthday(): ?\DateTimeInterface
+    public function getBirthday()
     {
         return $this->birthday;
     }
 
-    public function setBirthday(?\DateTimeInterface $birthday): self
+    public function setBirthday($birthday): self
     {
         $this->birthday = $birthday;
 
@@ -116,6 +122,18 @@ class RegisteredUser
     public function setEmail(string $email): self
     {
         $this->email = $email;
+
+        return $this;
+    }
+
+    public function getLanguage(): ?string
+    {
+        return $this->language;
+    }
+
+    public function setLanguage(string $language): self
+    {
+        $this->language = $language;
 
         return $this;
     }
