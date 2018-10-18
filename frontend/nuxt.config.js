@@ -33,10 +33,16 @@ module.exports = {
   */
   plugins: [
     {src: '~/plugins/datepicker.js', ssr: false},
+    '~/plugins/i18n.js',
   ],
+
+  /*
+  ** Enable express.js middleware
+   */
   serverMiddleware: [
     bodyParser.urlencoded({extended: true}),
   ],
+
   /*
   ** Nuxt.js modules
   */
@@ -46,6 +52,7 @@ module.exports = {
     '~/modules/router.js',
     ['@nuxtjs/dotenv', {path: '../.env'}],
   ],
+
   /*
   ** Axios module configuration
   */
@@ -56,9 +63,16 @@ module.exports = {
   },
 
   /*
+  ** Router configuration
+   */
+  router: {
+    middleware: 'i18n'
+  },
+  /*
   ** Build configuration
   */
   build: {
+    vendor: ['vue-i18n'],
     /*
     ** You can extend webpack config here
     */

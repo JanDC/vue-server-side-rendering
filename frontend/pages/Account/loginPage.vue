@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <form class="d-flex vh-100 w-50 p-3 mx-auto flex-column justify-content-center">
+    <form class="d-flex vh-100 p-3 mx-auto flex-column justify-content-center">
       <nuxt-link to="/">← Back</nuxt-link>
       <hr>
       <div class="form-group">

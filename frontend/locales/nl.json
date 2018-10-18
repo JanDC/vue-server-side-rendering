@@ -1,0 +1,12 @@
+{
+  "links": {
+    "home": "Startpagina",
+    "about": "Over ons",
+    "english": "Engels",
+    "french": "Française"
+  },
+  "home": {
+    "title": "Welkom",
+    "introduction": "Dit is een introductie in het nederlands."
+  }
+}

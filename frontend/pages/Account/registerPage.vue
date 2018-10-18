@@ -46,6 +46,7 @@
               </label>
             </div>
           </div>
+          <error name="sex" :errors="errors"/>
         </fieldset>
         <div class="form-group">
           <label for="register-password">Wachtwoord</label>
@@ -58,6 +59,7 @@
             <!-- loading indicator -->
             <input slot="placeholder" type="date" id="register-date" name="birthday" class="form-control" v-model="birthday"/>
           </no-ssr>
+          <error name="birthday" :errors="errors"/>
         </div>
         <button class="btn btn-primary">
           Registreer

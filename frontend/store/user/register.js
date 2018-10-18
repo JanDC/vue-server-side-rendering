@@ -7,7 +7,7 @@ export const state = () => ({
   form: {
     firstname: '',
     lastname: '',
-    sex: 'male',
+    sex: '',
     birthday: null,
     email: '',
   },

@@ -20,7 +20,7 @@
     "cross-env": "^5.2.0",
     "node-sass": "^4.9.3",
     "nuxt": "^2.0.0",
-    "nuxt-i18n": "^5.4.3",
+    "nuxt-i18n-module": "^0.1.0",
     "sass-loader": "^7.1.0",
     "simple-media-queries": "^1.1.1",
     "vuejs-datepicker": "^1.5.3",

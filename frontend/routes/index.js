@@ -3,28 +3,32 @@ import Router from 'vue-router';
 
 Vue.use(Router);
 
-const register = () => import('../pages/register.vue' /* webpackChunkName: "pages/register" */).then(m => m.default || m);
-const login = () => import('../pages/login.vue' /* webpackChunkName: "pages/login" */).then(m => m.default || m);
-const index = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m);
+function load (path) {
+  return () => import(/* webpackChunkName: "[request]" */ `../${path}.vue`).then(m => m.default || m);
+}
 
 export function createRouter () {
   return new Router({
     mode: 'history',
     routes: [
       {
-        path: '/',
+        path: "/",
+        redirect: '/nl'
+      },
+      {
+        path: '/:lang',
         name: 'index',
-        component: index,
+        component: load('pages/index'),
       },
       {
-        path: '/login',
+        path: '/:lang/login',
         name: 'login',
-        component: login,
+        component: load('pages/Account/loginPage'),
       },
       {
-        path: '/register',
+        path: '/:lang/register',
         name: 'register',
-        component: register,
+        component: load('pages/Account/registerPage'),
       }
     ]
   })
