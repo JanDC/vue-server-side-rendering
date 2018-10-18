@@ -1,6 +1,6 @@
 const pkg = require('./package');
-const dotEnv = require('dotenv').config({path: '../.env'});
 const bodyParser = require('body-parser');
+require('dotenv').config();
 
 module.exports = {
   mode: 'universal',
@@ -50,7 +50,7 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
     '~/modules/router.js',
-    ['@nuxtjs/dotenv', {path: '../.env'}],
+    ['@nuxtjs/dotenv', {path: '../'}],
   ],
 
   /*
@@ -58,8 +58,8 @@ module.exports = {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
-    baseURL: dotEnv.BASE_URL,
-    browserBaseURL: dotEnv.BASE_URL,
+    baseURL: process.env.BASE_URL,
+    browserBaseURL: process.env.BASE_URL,
   },
 
   /*
@@ -72,7 +72,6 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['vue-i18n'],
     /*
     ** You can extend webpack config here
     */
