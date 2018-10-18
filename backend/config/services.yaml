@@ -26,6 +26,8 @@ services:
     class:     App\Serializer\DateTimeNormalizer
     decorates: serializer.normalizer.datetime
     arguments: ['@App\Serializer\DateTimeNormalizer.inner']
+  App\DataProvider\LanguageFilteredDataProvider:
+    tags: [ { name: 'api_platform.collection_data_provider', priority: 2 } ]
 
   # controllers are imported separately to make sure services can be injected
   # as action arguments even if you don't extend any base controller class
