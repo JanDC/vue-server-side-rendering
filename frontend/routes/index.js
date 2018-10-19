@@ -13,7 +13,6 @@ export function createRouter () {
     routes: [
       {
         path: "/",
-        redirect: '/nl'
       },
       {
         path: '/:lang',

@@ -1,13 +1,23 @@
 {
-  "welcome": "Welkom losers (nl)",
-  "links": {
-    "home": "Startpagina",
-    "about": "Over ons",
-    "english": "Engels",
-    "french": "Française"
+  "welcome": "Condor 2.0 met Vue.js & API Platform",
+  "please_login_first": "Gelieve in te loggen om verder te gaan, svp.",
+  "login": {
+    "back": "Terug",
+    "email": "Email",
+    "password": "Wachtwoord",
+    "login": "Inloggen"
   },
-  "home": {
-    "title": "Welkom",
-    "introduction": "Dit is een introductie in het nederlands."
+  "register": {
+    "back": "Terug",
+    "firstname": "Voornaam",
+    "surname": "Achternaam",
+    "email": "Email",
+    "sex": "Geslacht",
+    "male": "Man",
+    "female": "Vrouw",
+    "neutral": "Neutraal",
+    "password": "Wachtwoord",
+    "birthday": "Geboortedatum",
+    "register": "Registreren"
   }
 }

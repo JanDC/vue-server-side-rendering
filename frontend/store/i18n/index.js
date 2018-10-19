@@ -1,6 +1,8 @@
+import {DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES} from '@/constants/i18n'
+
 export const state = () => ({
-  locales: ['nl', 'en'],
-  locale: 'nl'
+  locales: SUPPORTED_LANGUAGES,
+  locale: DEFAULT_LANGUAGE,
 });
 
 export const mutations = {

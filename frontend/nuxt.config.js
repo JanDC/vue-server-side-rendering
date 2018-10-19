@@ -1,5 +1,6 @@
 const pkg = require('./package');
 const bodyParser = require('body-parser');
+const createLocaleMiddleware = require('express-locale');
 require('dotenv').config();
 
 module.exports = {
@@ -34,6 +35,7 @@ module.exports = {
   plugins: [
     {src: '~/plugins/datepicker.js', ssr: false},
     '~/plugins/i18n.js',
+    '~/plugins/locale-url.js',
   ],
 
   /*
@@ -41,6 +43,7 @@ module.exports = {
    */
   serverMiddleware: [
     bodyParser.urlencoded({extended: true}),
+    createLocaleMiddleware(),
   ],
 
   /*

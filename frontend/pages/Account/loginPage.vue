@@ -1,14 +1,14 @@
 <template>
   <section class="container">
     <form class="d-flex vh-100 p-3 mx-auto flex-column justify-content-center">
-      <nuxt-link to="/">← Back</nuxt-link>
+      <nuxt-link :to="`/${$store.state.i18n.locale}`">← {{$t('login.back')}}</nuxt-link>
       <hr>
       <div class="form-group">
-        <label for="register-email-1">Email</label>
+        <label for="register-email-1">{{$t('login.email')}}</label>
         <input type="email" class="form-control" id="register-email-1">
       </div>
       <div class="form-group">
-        <label for="register-password-1">Wachtwoord</label>
+        <label for="register-password-1">{{$t('login.password')}}</label>
         <input type="password" class="form-control" id="register-password-1">
       </div>
       <button class="btn btn-primary">
@@ -22,6 +22,9 @@
 <script>
   export default {
     components: {
+    },
+    created(){
+      console.log(this.$router);
     }
   }
 </script>

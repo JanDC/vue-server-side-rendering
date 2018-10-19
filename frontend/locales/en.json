@@ -1,13 +1,23 @@
 {
-  "welcome": "Welcome losers (en)",
-  "links": {
-    "home": "Home",
-    "about": "About",
-    "english": "English version",
-    "french": "French version"
+  "welcome": "Condor 2.0 using Vue.js & API Platform",
+  "please_login_first": "Please login before continuing.",
+  "login": {
+    "back": "Back",
+    "email": "Email",
+    "password": "Password",
+    "login": "Login"
   },
-  "home": {
-    "title": "Welcome",
-    "introduction": "This is an introduction in English."
+  "register": {
+    "back": "Back",
+    "firstname": "Firstname",
+    "surname": "Surname",
+    "email": "Email",
+    "sex": "Sex",
+    "male": "Male",
+    "female": "Female",
+    "neutral": "Neutral",
+    "password": "Password",
+    "birthday": "Birthday",
+    "register": "Register"
   }
 }
