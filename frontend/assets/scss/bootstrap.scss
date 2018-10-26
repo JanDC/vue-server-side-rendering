@@ -1,1 +1,6 @@
 @import "./bootstrap/bootstrap";
+@import "~bootstrap-rfs/scss/functions";
+@import "bootstrap/variables";
+@import "~bootstrap-rfs/scss/variables";
+@import "bootstrap/variables-override";
+@import "~bootstrap-rfs/scss/mixins";

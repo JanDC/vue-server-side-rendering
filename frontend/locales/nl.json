@@ -1,4 +1,8 @@
 {
+  "routes":{
+    "login": "inloggen",
+    "register": "registreren"
+  },
   "welcome": "Condor 2.0 met Vue.js & API Platform",
   "please_login_first": "Gelieve in te loggen om verder te gaan, svp.",
   "login": {

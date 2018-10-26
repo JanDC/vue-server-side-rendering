@@ -20,7 +20,7 @@ export default function ({isHMR, env, req, app, store, route, params, error, red
   }
 
   // Update store to use the preferred language.
-  store.commit('i18n/SET_LANG', locale);
+  store.commit('i18n/SET_LOCALE', locale);
 
   // Update i18n (translations) to use the preferred language.
   app.i18n.locale = store.state.i18n.locale;

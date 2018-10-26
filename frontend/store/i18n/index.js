@@ -5,9 +5,18 @@ export const state = () => ({
   locale: DEFAULT_LANGUAGE,
 });
 
+export const getters = {
+  locale: state => state.locale
+};
+
+export const actions = {
+  setLocale ({ commit }, { locale }) {
+    commit('SET_LOCALE', { locale })
+  }
+};
+
 export const mutations = {
-  SET_LANG(state, locale) {
-    console.log(`taal in store: ${locale}`);
+  SET_LOCALE(state, locale) {
     if (state.locales.indexOf(locale) !== -1) {
       state.locale = locale
     }

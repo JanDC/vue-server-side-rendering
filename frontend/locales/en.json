@@ -1,4 +1,8 @@
 {
+  "routes":{
+    "login": "login",
+    "register": "register"
+  },
   "welcome": "Condor 2.0 using Vue.js & API Platform",
   "please_login_first": "Please login before continuing.",
   "login": {
